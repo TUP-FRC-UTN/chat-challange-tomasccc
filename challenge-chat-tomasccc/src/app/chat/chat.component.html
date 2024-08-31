@@ -1,0 +1,17 @@
+<div class="container mt-4" id="Conversacion">
+    <div class="form-floating mb-3">
+        <textarea class="form-control" [value]="mensajes.join('\n')"
+        placeholder="Tu conversación saldrá aquí." 
+        id="floatingTextarea2Disabled" style="height: 100px" disabled>
+        </textarea>
+        <label for="floatingTextarea2Disabled">Conversación</label>
+    </div>
+</div>
+<div id="Mensajes" class="container row" style="margin: 0 auto">
+    <div class="col-6">
+        <app-mensaje-usuario (enviarMensaje)="recibirMensaje($event,1)"></app-mensaje-usuario>
+    </div>
+    <div class="col-6">
+        <app-mensaje-usuario (enviarMensaje)="recibirMensaje($event,2)"></app-mensaje-usuario>
+    </div>
+</div>
